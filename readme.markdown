@@ -30,7 +30,15 @@ $ node example/parse.js -x 3 -y 4 -n5 -abc --beep=boop foo bar baz
 ```
 
 # security
+## [Update 2022-03-21]
+*prototype pollution bug (CVE-2021-44906)*
+https://security.snyk.io/vuln/SNYK-JS-MINIMIST-2429795
 
+All previous versions including 1.2.5 are still affected by a prototype pollution bug. Which just partially were closed since version 1.2.3.
+
+Version 1.2.6 resolves this issue.
+
+## Previous partial fix
 Previous versions had a prototype pollution bug that could cause privilege
 escalation in some circumstances when handling untrusted user input.
 
